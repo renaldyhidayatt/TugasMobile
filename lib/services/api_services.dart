@@ -5,7 +5,7 @@ import 'package:tugasmobile/models/employes.dart';
 import 'package:tugasmobile/models/posts.dart';
 
 class ApiService {
-  final String apiUrl = "http://f64b-103-217-219-154.ngrok.io";
+  final String apiUrl = "http://46aa-103-217-219-154.ngrok.io";
 
   Future<List<Employee>> fetchEmployee() async {
     final response = await http.get(Uri.parse('${this.apiUrl}/employee'),

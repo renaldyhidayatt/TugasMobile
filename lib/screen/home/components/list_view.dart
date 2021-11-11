@@ -50,10 +50,8 @@ class _CustomListViewState extends State<CustomListView> {
                         padding: EdgeInsets.only(right: 30),
                         child: Align(
                           alignment: Alignment.centerRight,
-                          child: Icon(
-                            FontAwesomeIcons.trash,
-                            color: Colors.white,
-                          ),
+                          child: Icon(FontAwesomeIcons.trash,
+                              color: Color(0xFFFA8182), size: 28),
                         )),
                   ),
                 );
