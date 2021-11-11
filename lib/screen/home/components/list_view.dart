@@ -5,6 +5,7 @@ import 'package:tugasmobile/models/posts.dart';
 import 'package:tugasmobile/screen/home/components/dismissible.dart';
 import 'package:tugasmobile/screen/home/components/list_tile.dart';
 import 'package:tugasmobile/services/api_services.dart';
+import 'package:tugasmobile/widget/custom_alert.dart';
 
 class CustomListView extends StatefulWidget {
   @override
@@ -19,6 +20,7 @@ class _CustomListViewState extends State<CustomListView> {
   @override
   void initState() {
     super.initState();
+    this.apiService.fetchEmployee();
     futureEmployee = apiService.fetchEmployee();
   }
 
@@ -35,6 +37,11 @@ class _CustomListViewState extends State<CustomListView> {
                   itemCount: snapshot.data!.length,
                   itemBuilder: (_, index) => Dismissible(
                     direction: DismissDirection.endToStart,
+                    confirmDismiss: (direction) => showDialog(
+                        context: context,
+                        builder: (context) => CustomAlertDialog()),
+                    onDismissed: (direction) => apiService
+                        .deleteEmployee(snapshot.data![index].id.toString()),
                     key: Key(snapshot.data![index].id.toString()),
                     child: Card(
                       child: CustomListTile(employee: snapshot.data![index]),

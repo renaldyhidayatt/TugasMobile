@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tugasmobile/models/employes.dart';
 import 'package:tugasmobile/screen/add/components/text_field.dart';
+import 'package:tugasmobile/services/api_services.dart';
 import 'package:tugasmobile/widget/custom_appbar.dart';
 
 class AddNoteScreen extends StatelessWidget {
+  final ApiService apiService = ApiService();
+  late final Employee employee;
+
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
 
@@ -41,8 +46,10 @@ class AddNoteScreen extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                       onPressed: () {
-                        print(
-                            "Bisa ${_firstNameController.text} ${_lastNameController.text}");
+                        apiService.createEmployee(Employee(
+                            firstName: _firstNameController.text,
+                            lastName: _lastNameController.text));
+                        print("Bisa");
                       },
                     )
                   ],
