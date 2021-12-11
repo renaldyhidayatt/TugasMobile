@@ -1,9 +1,9 @@
-from sqlmodel import create_engine
-from sqlmodel.main import SQLModel
+from sqlmodel import create_engine # Untuk membuat engine
+from sqlmodel.main import SQLModel # Untuk membuat buat table
 
 
-SQLALCHAMY_DATABASE_URL = "sqlite:///./student.db"
-engine = create_engine(SQLALCHAMY_DATABASE_URL, echo=True)
+SQLALCHAMY_DATABASE_URL = "sqlite:///./student.db" # url untuk menaruh letak database nya
+engine = create_engine(SQLALCHAMY_DATABASE_URL, echo=True) ## untuk membuat engine 
 
 
 def create_table():

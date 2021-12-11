@@ -1,14 +1,14 @@
 from fastapi import APIRouter, HTTPException,status
 
-from dto.employee import EmployeeDto
-from sqlmodel import Session
-from config.database import engine
-from models.employee import Employee
+from dto.employee import EmployeeDto # data transfer object sesuai yang kita buat
+from sqlmodel import Session 
+from config.database import engine 
+from models.employee import Employee # class model 
 
-router = APIRouter(prefix="/employee", tags=["Employee"])
+router = APIRouter(prefix="/employee", tags=["Employee"]) # routing /employee
 
 
-@router.post("/create")
+@router.post("/create") # method post
 def createEmployee(request: EmployeeDto):
     db = Session(engine)
 
@@ -47,13 +47,13 @@ def updateEmployee(id: int, request:EmployeeDto):
 
 @router.delete('/delete/{id}')
 def deleteEmployee(id: int):
-    db = Session(engine);
-    db_id = db.query(Employee).filter(Employee.id == id).first()
+    db = Session(engine); # membuat session berdasarkan engine
+    db_id = db.query(Employee).filter(Employee.id == id).first() ## untuk mengambil data pertama
 
     if not db_id:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No Employe id")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No Employe id") # untuk menghandle data
 
-    db.delete(db_id);
+    db.delete(db_id); # untuk delete berdasarkan id
     db.commit();
 
-    return "Delete aja";
+    return "Delete aja"; # menghasilkan return delete aja
