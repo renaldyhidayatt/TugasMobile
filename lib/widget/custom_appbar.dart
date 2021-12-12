@@ -7,10 +7,10 @@ class CustomAppBar extends StatelessWidget {
       this.icon,
       this.onPressed});
 
-  final String title;
+  final String title; // string title
   final bool isVisible;
-  final IconData? icon;
-  final Function()? onPressed;
+  final IconData? icon; // object Icon
+  final Function()? onPressed; // function untuk menghandle function
 
   @override
   Widget build(BuildContext context) {

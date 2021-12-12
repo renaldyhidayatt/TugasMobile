@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
 class ReadingTextField extends StatelessWidget {
-  final String? text;
-  final double? fontSize;
+  final String? text; // text
+  final double? fontSize; // ukuran font
 
-  final FontWeight? fontWeight;
+  final FontWeight? fontWeight; // keterangan font
 
   ReadingTextField({
     required this.text,
     this.fontSize,
     this.fontWeight,
-  });
+  }); // constractor 
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+    return Padding( // padding
+      padding: EdgeInsets.symmetric(horizontal: 20), // membuat pixel secara horizontal
       child: TextField(
         enabled: false,
         maxLines: null,

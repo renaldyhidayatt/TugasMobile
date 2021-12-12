@@ -8,3 +8,4 @@ engine = create_engine(SQLALCHAMY_DATABASE_URL, echo=True) ## untuk membuat engi
 
 def create_table():
     SQLModel.metadata.create_all(engine)
+

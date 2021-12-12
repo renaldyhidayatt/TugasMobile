@@ -6,7 +6,7 @@ import 'package:tugasmobile/themes/dark_theme.dart';
 import 'package:tugasmobile/themes/light_theme.dart';
 
 void main() => runApp(ChangeNotifierProvider(
-      create: (context) => SharedPref(),
+      create: (context) => SharedPref(), // mendaftarkan localstorage ke provider
       child: MyApp(),
     ));
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     var data = Provider.of<SharedPref>(context);
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: data.isNight ? darkTheme : lightTheme,
+        theme: data.isNight ? darkTheme : lightTheme, // untuk theme
         debugShowCheckedModeBanner: false,
         home: HomeScreen());
   }

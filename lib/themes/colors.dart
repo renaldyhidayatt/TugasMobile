@@ -7,9 +7,9 @@ Color fillColor = Color(0xFFF4F8FB);
 Color iconColor = Color(0xFF3A3A3A);
 Color fabSplashColor = Color(0xFF00C1FF);
 Color cardColor = Color(0xffFAFDFF);
-Color shadowCard = Color(0xff73c7fc).withOpacity(0.3);
+Color shadowCard = Color(0xff73c7fc).withOpacity(0.3); // opasitas lebar 
 Color dialogColor = Color(0xffF8FCFF);
-Color splashColor = primaryColor.withOpacity(0.05);
+Color splashColor = primaryColor.withOpacity(0.05);// opasitas lebar 
 
 Color darkThemePrimaryColor = Color(0xFF17B3D2);
 Color darkThemeBackgroundColor = Color(0xFF2E2E3C);
@@ -19,9 +19,9 @@ Color darkThemeFABSplashColor = Color(0xFF3EC0DA);
 Color darkThemeDialogColor = Color(0xFF302E3F);
 Color darkThemeShadowCard = Color(0xFF36323B);
 Color darkThemeCardColor = Color(0xFF302E3F);
-Color darkThemeSplashColor = Colors.white.withOpacity(0.05);
+Color darkThemeSplashColor = Colors.white.withOpacity(0.05); //opasitas lebar 
 
 OutlineInputBorder inputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(15),
   borderSide: BorderSide(color: Colors.transparent),
-);
+); // garis keluar line

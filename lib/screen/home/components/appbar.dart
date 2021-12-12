@@ -5,25 +5,25 @@ import 'package:tugasmobile/screen/settings/settings.dart';
 class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.fromLTRB(20, 8, 5, 8),
-      child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
+    return Container( // untuke membungkus widget
+      padding: EdgeInsets.fromLTRB(20, 8, 5, 8), // yang digunakan untuk mengatur offset dari masing-masing dari empat sisi a kotak
+      child: Row( // 
+          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Membagi ruang ekstra secara merata di antara children
+          children: <Widget>[ // object Widget array
             Text(
               'Home',
               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+                fontSize: 20, // ukuran text
+                fontWeight: FontWeight.bold, // text yang tebal
               ),
             ),
             IconButton(
               icon: Icon(
-                FontAwesomeIcons.cog,
-                size: 22,
+                FontAwesomeIcons.cog, // icon cog
+                size: 22, // size icon
               ),
               onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SettingsScreen())),
+                  MaterialPageRoute(builder: (context) => SettingsScreen())), // routing push ke settingsScreen
             )
           ]),
     );

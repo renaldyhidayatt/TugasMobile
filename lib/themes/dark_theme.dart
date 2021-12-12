@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 
 ThemeData darkTheme = ThemeData(
-  brightness: Brightness.dark,
+  brightness: Brightness.dark, // kecerahan
   scaffoldBackgroundColor: darkThemeBackgroundColor,
-  highlightColor: darkThemeSplashColor,
+  highlightColor: darkThemeSplashColor, // 
   splashColor: darkThemeSplashColor,
   fontFamily: 'Poppins',
   textTheme: TextTheme(

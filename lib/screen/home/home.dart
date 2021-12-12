@@ -10,15 +10,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(children: <Widget>[HomeAppBar(), CustomListView()]),
+        child: Column(children: <Widget>[HomeAppBar(), CustomListView()]), 
+        // membungkus widget dan object class Widget array 
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => AddNoteScreen()),
         ),
+        // ketika diklik maka ke push addNoteScreen
         child: Icon(FontAwesomeIcons.plus),
-      ),
+      ), // membuat button
     );
   }
 }
